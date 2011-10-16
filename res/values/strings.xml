@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MainActivity</string>
+    
+    <string name="paint_style">Style:</string>
+    <string name="stroke_cap">Cap:</string>
+    <string name="stroke_jion">Jion:</string>
+    <string name="stroke_width">Width:</string>
+    <string name="paint_color">Color:</string>
+    
+    <string-array name="paint_style_value">
+        <item>FILL</item>
+        <item>STROKE</item>
+        <item>FILL_AND_STROKE</item>
+    </string-array>
+    <string-array name="stroke_cap_value">
+        <item>BUTT</item>
+        <item>ROUND</item>
+        <item>SQUARE</item>
+    </string-array>
+    <string-array name="stroke_jion_value">
+        <item>MITER</item>
+        <item>ROUND</item>
+        <item>BEVEL</item>
+    </string-array>
+</resources>

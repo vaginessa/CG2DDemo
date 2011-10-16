@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : custom_painter.xml
+    Created on : 2011年10月16日, 下午5:39
+    Author     : drcher
+    Description:
+        Purpose of the document follows.
+-->
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    >
+<RelativeLayout
+    android:id="@+id/cunstompaint_banner_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+        <!--
+        Activity 启动后,会将焦点定位在第一个focusable的组件上,
+        在这里就是EditText.会跳到EditText那里.
+        目前只能让第一个控件可focus来取消这个动作
+        -->
+    <Button 
+        android:id="@+id/draw"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Draw"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentLeft="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"        
+    />
+    <TextView 
+        android:id="@+id/paint_style_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paint_style"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/draw"
+    />
+    <Spinner 
+        android:id="@+id/paint_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paint_style_text"
+        android:layout_alignLeft="@id/paint_style_text"
+        android:layout_marginRight="15dp"
+        android:prompt="@string/paint_style"
+    />
+    <TextView 
+        android:id="@+id/stroke_cap_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stroke_cap"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/paint_style"
+    />
+    <Spinner 
+        android:id="@+id/stroke_cap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stroke_cap_text"
+        android:layout_alignLeft="@id/stroke_cap_text"
+        android:layout_marginRight="15dp"
+        android:prompt="@string/stroke_cap"
+    />
+    <TextView
+        android:id="@+id/stroke_jion_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stroke_jion"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/stroke_cap"
+    />
+    <Spinner
+        android:id="@+id/stroke_jion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stroke_jion_text"
+        android:layout_alignLeft="@id/stroke_jion_text"
+        android:layout_marginRight="15dp"
+        android:prompt="@string/stroke_jion"
+    />
+    <TextView 
+        android:id="@+id/stroke_width_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stroke_width"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/stroke_jion"
+    />
+    <EditText 
+        android:id="@+id/stroke_width"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stroke_width_text"
+        android:layout_alignLeft="@id/stroke_width_text"
+        android:layout_marginRight="15dp"
+        android:prompt="@string/stroke_width"
+        android:inputType="number"
+    />
+    <TextView
+        android:id="@+id/paint_color_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paint_color"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/stroke_width"
+    />
+    <Button 
+        android:id="@+id/paint_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paint_color_text"
+        android:layout_alignLeft="@id/paint_color_text"
+        android:layout_marginRight="15dp"
+        android:text="color"
+        android:textSize="18px"
+    />
+</RelativeLayout>
+</HorizontalScrollView>
